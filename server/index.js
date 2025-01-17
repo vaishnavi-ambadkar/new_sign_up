@@ -7,7 +7,7 @@ const app=express()
 app.use(express.json())
 app.use(cors(
   {
-  origin:["https://new-sign-up-frontend.vercel.app/"],
+  origin:["https://new-sign-up-frontend.vercel.app"],
   methods:["POST","GET"],
   credentials:ture
   }
