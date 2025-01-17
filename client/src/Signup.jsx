@@ -200,6 +200,7 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    axios.defaults.withCredentials = true;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -222,7 +223,7 @@ function Signup() {
 
         // Send data to the backend
         axios
-            .post("https://new-sign-up-d2nm.vercel.app/", { name, email, dob, password })
+            .post('https://new-sign-up-d2nm.vercel.app/', { name, email, dob, password })
             .then((result) => {
                 console.log(result);
                 alert("Registration done successfully!"); // Show success pop-up
